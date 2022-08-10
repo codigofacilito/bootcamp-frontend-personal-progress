@@ -1,0 +1,184 @@
+/*
+  Estos son los colores
+  azul oscuro -> #122250
+  azul -> #366BFF
+  azul claro -> #C9D6FA
+  rosa -> #FF2EAB
+  font-family: 'Poppins',sans-serif;
+  font-family: 'Roboto',sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto&display=swap');
+
+/* Globales */
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+
+  font-size: 16px;
+
+  margin: 0;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* Utilidades */
+.container{
+  width: 1104px; 
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-s{
+  width: 502px;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main-text{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.125rem;
+  line-height: 3.1875rem;
+}
+
+.text-s {
+  font-size: 0.875rem;
+}
+
+.text-m {
+  font-size: 1.25rem;
+}
+
+.text-xl {
+  font-size: 2.75rem;
+}
+.top-space{
+  margin-top: 1rem;
+}
+.text-accent{
+  color: #FF2EAB;
+}
+.text-center{
+  text-align: center;
+}
+
+/* Componentes */
+.main-nav{
+  margin-top: 1.5rem; 
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.main-nav ul{
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+.main-nav ul a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.cover{
+  padding-top: 72px;
+  padding-bottom: 82px;
+  background-image: url(../images/figure.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.main-header{
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-template-rows: auto auto 1fr;
+  column-gap: min(142px, 10vw);
+  
+  grid-template-areas: 
+    "texto-uno imagen"
+    "texto-principal imagen"
+    "texto-secundario imagen";
+}
+
+.main-header p{
+  align-self: flex-start;
+}
+
+
+.main-header img{
+  grid-area: imagen;
+}
+
+.green-dot{
+  height: 0.625rem;
+  width: 0.625rem;
+  background: #00F07D;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.benefits{
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(201, 214, 250, 0.2));
+}
+
+.benefits h2{
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  margin: 0;
+}
+
+.benefits .text-secondary{
+  margin-top: 8px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  color: rgba(18, 34, 80, 0.64);
+}
+
+.skills{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 3.75rem;
+  margin-top:3rem;
+  text-align: center;
+}
+.skills .skill{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.skill .icon{
+  margin-bottom:20px;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  background-color: #F9FBFC;
+  border: 1px solid #9DAFBD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9DAFBD;
+
+}
+
+/* rem -> Unidad relativa a la fuente raiz, el tamaño de un caracter de la fuente raiz */
+/* em -> Fuente actual */
